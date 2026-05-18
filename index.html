@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>국립세종수목원</title>
+  <link rel="stylesheet" href="css/style.css" type="text/css">
+  <link rel="stylesheet" href="css/layout.css" type="text/css">
+  <link rel="stylesheet" href="css/component.css" type="text/css">
+  <link rel="stylesheet" href="css/media.css" type="text/css">
+  <link rel="stylesheet" href="css/swiper.css" type="text/css">
+  
+  <!-- 스와이퍼 css 불러오기 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+  <!-- js 불러오기 -->
+  <script src="js/script.js" defer></script>
+
+</head>
+<body>
+
+
+<div class="all-wrap"> 
+
+<!-- ===== HEADER (Mega Menu) ===== -->
+  <header class="header">
+  <div class="header-box">
+    <!-- 1) LOGO -->
+    <div class="box logo-box">
+      <a class="logo" href="#">
+        <img src="image/logo.png" alt="로고">
+      </a>
+    </div>
+
+    <!-- 2) NAV -->
+    <div class="box nav-box">
+      <nav class="gnb-nav" aria-label="주요 메뉴">
+        <ul class="gnb">
+          <!-- 관람 안내 -->
+          <li class="gnb-item has-mega">
+            <a class="gnb-link" href="https://example.com" 
+              target="_blank" rel="noopener noreferrer">관람 안내</a>
+
+            <div class="mega" role="region" aria-label="관람 안내 하위 메뉴">
+              <div class="mega-inner">
+                <!-- LEFT : 이미지 -->
+                  <div class="mega-media">
+                    <h3 class="mega-title fs-24">관람 안내</h3>
+                    <img src="image/mega_img2.png" alt="관람 안내 대표 이미지">
+                  </div>
+
+
+                <!-- CENTER : 메뉴 -->
+                <div class="mega-col mega-menu">
+                  <h4 class="mega-title-sub fs-16">관람 안내
+                    <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 9l6 6 6-6"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                  </h4>
+                  <ul class="mega-links">
+                    <li><a href="#">관람정보</a></li>
+                    <li><a href="#">예매안내</a></li>
+                    <li><a href="#">오시는길</a></li>
+                    <li><a href="#">주요시설</a></li>
+                    <li><a href="#">편의시설</a></li>
+                  </ul>
+                </div>
+
+                <!-- RIGHT : 배너 -->
+                <div class="mega-col mega-banner">
+                  <p class="mega-badge">안내</p>
+                  <p class="mega-banner-title">처음 오셨나요?</p>
+                  <p class="mega-banner-desc">관람시간 · 요금 · 오시는길</p>
+                  <a class="mega-banner-btn" href="#">빠른 안내</a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- 전시 -->
+          <li class="gnb-item has-mega">
+            <a class="gnb-link" href="#">전시</a>
+
+            <div class="mega" role="region" aria-label="전시 하위 메뉴">
+              <div class="mega-inner">
+                  <!-- LEFT : 이미지 -->
+                  <div class="mega-media">
+                    <h3 class="mega-title fs-24">전시</h3>
+                    <img src="image/mega_img2.png" alt="관람 안내 대표 이미지">
+                  </div>
+                
+                  <!-- CENTER : 메뉴 -->
+                  <div class="mega-col">
+                  <h4 class="mega-title-sub fs-16">전시
+                    <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 9l6 6 6-6"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                  </h4>
+                    <ul class="mega-links">
+                      <li><a href="#">상설전시</a></li>
+                      <li><a href="#">기획전시</a></li>
+                      <li><a href="#">문화행사</a></li>
+                      <li><a href="#">전시일정</a></li>
+                    </ul>
+                  </div>
+
+                  <!-- RIGHT : 배너 -->
+                  <div class="mega-col mega-banner">
+                    <p class="mega-badge">추천</p>
+                    <p class="mega-banner-title">이번 달 기획전</p>
+                    <p class="mega-banner-desc">전시 핵심 포인트 & 관람 동선</p>
+                    <a class="mega-banner-btn" href="#">전시 보기</a>
+                  </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- 교육 -->
+          <li class="gnb-item has-mega">
+            <a class="gnb-link" href="#">교육</a>
+
+            <div class="mega" role="region" aria-label="교육 하위 메뉴">
+              <div class="mega-inner">
+                  <!-- LEFT : 이미지 -->
+                  <div class="mega-media">
+                    <h3 class="mega-title fs-24">교육</h3>
+                    <img src="image/mega_img2.png" alt="관람 안내 대표 이미지">
+                  </div>
+
+                  <!-- CENTER : 메뉴 -->
+                  <div class="mega-col">
+                  <h4 class="mega-title-sub fs-16">교육
+                    <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 9l6 6 6-6"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                  </h4>
+                    <ul class="mega-links">
+                      <li><a href="#">교육 소개</a></li>
+                      <li><a href="#">교육 신청</a></li>
+                      <li><a href="#">교육 자료실</a></li>
+                      <li><a href="#">사회교육</a></li>
+                    </ul>
+                  </div>
+
+                  <!-- RIGHT : 배너 -->
+                  <div class="mega-col mega-banner">
+                    <p class="mega-badge">모집</p>
+                    <p class="mega-banner-title">체험 프로그램</p>
+                    <p class="mega-banner-desc">가족 · 성인 · 단체 맞춤 과정</p>
+                    <a class="mega-banner-btn" href="#">신청하기</a>
+                  </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- 연구 -->
+          <li class="gnb-item has-mega">
+            <a class="gnb-link" href="#">연구</a>
+
+            <div class="mega" role="region" aria-label="연구 하위 메뉴">
+              <div class="mega-inner">
+                  <!-- LEFT : 이미지 -->
+                  <div class="mega-media">
+                    <h3 class="mega-title fs-24">연구</h3>
+                    <img src="image/mega_img2.png" alt="관람 안내 대표 이미지">
+                  </div>
+
+                  <!-- CENTER : 메뉴 -->
+                  <div class="mega-col">
+                    <h3 class="mega-title-sub fs-16">연구
+                      <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 9l6 6 6-6"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                      </svg>
+                    </h3>
+                    <ul class="mega-links">
+                      <li><a href="#">연구개요</a></li>
+                      <li><a href="#">식물보전</a></li>
+                      <li><a href="#">연구성과</a></li>
+                      <li><a href="#">...</a></li>
+                    </ul>
+                  </div>
+
+                  <!-- RIGHT : 배너 -->
+                  <div class="mega-col mega-banner">
+                    <p class="mega-badge">아카이브</p>
+                    <p class="mega-banner-title">연구성과 모아보기</p>
+                    <p class="mega-banner-desc">보고서 · 논문 · 자료실</p>
+                    <a class="mega-banner-btn" href="#">자료 보기</a>
+                  </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- 반려식물 -->
+          <li class="gnb-item has-mega">
+            <a class="gnb-link" href="#">반려식물</a>
+
+            <div class="mega" role="region" aria-label="반려식물 하위 메뉴">
+              <div class="mega-inner">
+                  <!-- LEFT : 이미지 -->
+                  <div class="mega-media">
+                    <h3 class="mega-title fs-24">반려식물</h3>
+                    <img src="image/mega_img2.png" alt="관람 안내 대표 이미지">
+                  </div>
+                  
+                  <!-- CENTER : 메뉴 -->
+                  <div class="mega-col">
+                    <h3 class="mega-title-sub fs-16">반려식물
+                      <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 9l6 6 6-6"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                      </svg>
+                    </h3>
+                    <ul class="mega-links">
+                      <li><a href="#">상담예약</a></li>
+                      <li><a href="#">식물관리팀</a></li>
+                      <li><a href="#">전시행사</a></li>
+                      <li><a href="#">...</a></li>
+                    </ul>
+                  </div>
+
+                  <!-- RIGHT : 배너 -->
+                  <div class="mega-col mega-banner">
+                    <p class="mega-badge">케어</p>
+                    <p class="mega-banner-title">우리집 식물 상담</p>
+                    <p class="mega-banner-desc">예약 후 전문가에게 1:1 문의</p>
+                    <a class="mega-banner-btn" href="#">상담 예약</a>
+                  </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- 수목원 소개 -->
+          <li class="gnb-item has-mega">
+            <a class="gnb-link" href="#">수목원 소개</a>
+
+            <div class="mega" role="region" aria-label="수목원 소개 하위 메뉴">
+              <div class="mega-inner">
+                  <!-- LEFT : 이미지 -->
+                  <div class="mega-media">
+                    <h3 class="mega-title fs-24">수목원 소개</h3>
+                    <img src="image/mega_img2.png" alt="관람 안내 대표 이미지">
+                  </div>
+
+                  <!-- CENTER : 메뉴 -->
+                  <div class="mega-col">
+                    <h3 class="mega-title-sub fs-16">수목원 소개
+                      <svg class="arrow" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 9l6 6 6-6"
+                              fill="none"
+                              stroke="currentColor"
+                              stroke-width="2"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                      </svg>
+                    </h3>
+                    <ul class="mega-links">
+                      <li><a href="#">수목원 소개</a></li>
+                      <li><a href="#">조직안내</a></li>
+                      <li><a href="#">비전.미션</a></li>
+                      <li><a href="#">보도자료</a></li>
+                    </ul>
+                  </div>
+
+                  <!-- RIGHT : 배너 -->
+                  <div class="mega-col mega-banner">
+                    <p class="mega-badge">소식</p>
+                    <p class="mega-banner-title">공지 · 보도자료</p>
+                    <p class="mega-banner-desc">최신 소식을 빠르게 확인하세요</p>
+                    <a class="mega-banner-btn" href="#">바로 가기</a>
+                  </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- 3) RIGHT AREA (기존 "3" 자리) -->
+    <div class="box right-box">
+      <!-- 원하는대로 바꾸면 됨 -->
+      <a class="action" href="#">예약하기</a>
+      <a class="action" href="#">검색</a>
+    </div>
+
+    <span class="gnb-indicator" aria-hidden="true"></span>
+  </div> <!-- header-box 끝 -->
+  </header>
+
+<!-- ===== (선택) 이하 페이지 콘텐츠 ===== -->
+  <main>
+    <!-- /// 메인 이미지 슬라이드 (스와이퍼) /// -->
+  <div class="swiper mainSwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="image/main_bg1_after.png" alt="메인 전경" class="main-slide-img">
+      </div>
+      <div class="swiper-slide">
+        <img src="image/main_bg2_after.png" alt="메인 전경" class="main-slide-img">
+      </div>
+      <div class="swiper-slide">
+        <img src="image/main_bg3.jpg" alt="메인 전경" class="main-slide-img">
+      </div>
+      <div class="swiper-slide">
+        <img src="image/main_bg4.jpg" alt="메인 전경" class="main-slide-img">
+      </div>
+    </div>
+    <!-- ✅ 커스텀 네비게이션 -->
+    <button class="nav-btn nav-prev" type="button" aria-label="이전 슬라이드">
+      <svg class="nav-ic" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M14.5 5.5 8 12l6.5 6.5" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+    <button class="nav-btn nav-next" type="button" aria-label="다음 슬라이드">
+      <svg class="nav-ic" width="26" height="26" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M9.5 5.5 16 12l-6.5 6.5" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+    <div class="swiper-pagination"></div>
+  </div>
+
+<!-- /// 휴무일 안내 /// -->
+  <!-- <div class="noti-wrap"></div> -->
+
+<!-- /// 퀵메뉴 /// -->
+  <div class="quick-wrap">
+    <div class="quick-box-wrap">
+      <div class="quick-box">
+        <img src="image/quick-menu-01.svg" alt="아이콘1">
+        <span class="fs-18">관람 안내</span>
+      </div>
+      <div class="quick-box">
+        <img src="image/quick-menu-02.svg" alt="아이콘2">
+        <span class="fs-18">오시는 길</span>
+      </div>
+      <div class="quick-box">
+        <img src="image/quick-menu-03.svg" alt="아이콘3">
+        <span class="fs-18">전시원 안내</span>
+      </div>
+      <div class="quick-box">
+        <img src="image/quick-menu-04.svg" alt="아이콘4">
+        <span class="fs-18">통합 예약</span>
+      </div>
+    </div>
+  </div>
+  
+
+  <section class="event_con">
+    <div class="all_left">
+    <div class="all_header">
+       <div class="all_title_col">
+        <h2 class="Aggravo">전시 및 행사</h2>
+        <p class="Pretendard">수목원의 다양한 경험을 확인해보세요!</p>
+       </div>
+
+       <!-- ✅ 인디케이터 버튼 영역 --> 
+      <div class="all_indicator">
+        <button class="indicator-btn event-prev" aria-label="이전"></button>
+        <button class="indicator-btn event-toggle" aria-label="재생/정지"></button>
+        <button class="indicator-btn event-next" aria-label="다음"></button>
+        <a href="/archive.html" class="indicator-btn more" aria-label="더보기 페이지 이동">+</a>
+      </div>
+
+
+    </div>
+    </div> 
+
+
+
+  <div class="swiper exhibitSwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <a class="card exhibit-card" href=""><img src="image/poster1.png" alt="포스터1"></a>
+      </div>
+      <div class="swiper-slide">
+        <a class="card exhibit-card" href=""><img src="image/poster2.png" alt="포스터2"></a>
+      </div>
+      <div class="swiper-slide">
+        <a class="card exhibit-card" href=""><img src="image/poster3.png" alt="포스터3"></a>
+      </div>
+      <div class="swiper-slide">
+        <a class="card exhibit-card" href=""><img src="image/poster4.png" alt="포스터4"></a>
+      </div>
+
+      <div class="swiper-slide">
+        <a class="card exhibit-card" href=""><img src="image/poster5.png" alt="포스터5"></a>
+      </div>
+      <div class="swiper-slide">
+        <a class="card exhibit-card" href=""><img src="image/poster6.png" alt="포스터6"></a>
+      </div>
+      <div class="swiper-slide">
+        <a class="card exhibit-card" href=""><img src="image/poster7.png" alt="포스터7"></a>
+      </div>
+      <div class="swiper-slide">
+        <a class="card exhibit-card" href=""><img src="image/poster8.png" alt="포스터8"></a>
+      </div>
+    </div>
+    
+    <div class="swiper-scrollbar exhibit-scrollbar"></div>
+
+  </div>
+
+   <!-- <div class="swiper-btn-next"></div>
+   <div class="swiper-btn-prev"></div> -->
+
+  </section> 
+
+<!-- /// 봄의 수목원 /// -->
+  <section class="april_con">
+    <div class="all_left">
+    <div class="all_header">
+       <div class="all_title_row">
+        <img src="image/flower-icon.svg" alt="꽃">
+        <h2>봄의 수목원</h2>
+       </div>
+    </div>  <!-- event-header 끝 -->
+    </div>  <!-- event-left 끝 -->
+
+
+    <!-- 탭 버튼 -->
+    <div class="spring-tabs" data-spring-tabs>
+      <div class="spring-tablist" role="tablist" aria-label="봄의 수목원 탭">
+        <button
+          type="button"
+          class="spring-tab-btn active"
+          role="tab"
+          aria-selected="true"
+          aria-controls="spring-panel-gaze"
+          tabindex="0"
+          data-spring-tab="gaze"
+        >
+          봄을 닮은 시선
+        </button>
+
+        <button
+          type="button"
+          class="spring-tab-btn"
+          role="tab"
+          aria-selected="false"
+          aria-controls="spring-panel-plant"
+          tabindex="-1"
+          data-spring-tab="plant"
+        >
+          식물
+        </button>
+      </div>
+
+      <!-- 패널 1: 봄을 닮은 시선 -->
+      <div
+        id="spring-panel-gaze"
+        class="spring-panel active"
+        role="tabpanel"
+        tabindex="0"
+      >
+        <div class="spring-card-flex" role="list">
+          <!-- 카드 1 -->
+          <a class="spring-card" href="#" role="listitem">
+            <figure class="spring-card-thumb">
+              <img src="image/april1.png" alt="봄을 닮은 시선 카드 이미지 1" loading="lazy">
+            </figure>
+            <div class="spring-card-top">
+              <h3 class="spring-card-title">4월</h3>
+            </div>
+          </a>
+
+          <!-- 카드 2 -->
+          <a class="spring-card" href="#" role="listitem">
+            <figure class="spring-card-thumb">
+              <img src="image/april2.png" alt="봄을 닮은 시선 카드 이미지 2" loading="lazy">
+            </figure>
+            <div class="spring-card-top">
+              <h3 class="spring-card-title">5월</h3>
+            </div>
+          </a>
+
+          <!-- 카드 3 -->
+          <a class="spring-card" href="#" role="listitem">
+            <figure class="spring-card-thumb">
+              <img src="image/april3.png" alt="봄을 닮은 시선 카드 이미지 3" loading="lazy">
+            </figure>
+            <div class="spring-card-top">
+              <h3 class="spring-card-title">4월</h3>
+            </div>
+          </a>
+
+          <!-- 카드 4 -->
+          <a class="spring-card" href="#" role="listitem">
+            <figure class="spring-card-thumb">
+              <img src="image/april4.png" alt="봄을 닮은 시선 카드 이미지 4" loading="lazy">
+            </figure>
+            <div class="spring-card-top">
+              <h3 class="spring-card-title">5월</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- 패널 2: 식물 -->
+      <div
+        id="spring-panel-plant"
+        class="spring-panel"
+        role="tabpanel"
+        tabindex="0"
+        hidden
+      >
+        <div class="spring-card-flex" role="list">
+          <!-- 카드 1 -->
+          <a class="spring-card" href="#" role="listitem">
+            <figure class="spring-card-thumb">
+              <img src="image/flower1.png" alt="식물 카드 이미지 1" loading="lazy">
+            </figure>
+            <div class="spring-card-top">
+              <h3 class="spring-card-title">골든 선라이트</h3>
+            </div>
+          </a>
+
+          <!-- 카드 2 -->
+          <a class="spring-card" href="#" role="listitem">
+            <figure class="spring-card-thumb">
+              <img src="image/flower2.png" alt="식물 카드 이미지 2" loading="lazy">
+            </figure>
+            <div class="spring-card-top">
+              <h3 class="spring-card-title">제이엔에이 웨딩피치</h3>
+            </div>
+          </a>
+
+          <!-- 카드 3 -->
+          <a class="spring-card" href="#" role="listitem">
+            <figure class="spring-card-thumb">
+              <img src="image/flower3.png" alt="식물 카드 이미지 3" loading="lazy">
+            </figure>
+            <div class="spring-card-top">
+              <h3 class="spring-card-title">수련 (세미)</h3>
+            </div>
+          </a>
+
+          <!-- 카드 4 -->
+          <a class="spring-card" href="#" role="listitem">
+            <figure class="spring-card-thumb">
+              <img src="image/flower4.png" alt="식물 카드 이미지 4" loading="lazy">
+            </figure>
+            <div class="spring-card-top">
+              <h3 class="spring-card-title">수국 (화이트 펄)</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </section>  
+
+
+
+<!-- /// 추천코스 /// -->
+
+<section class="pick_con">
+    <div class="all_left">
+    <div class="all_header">
+      <div class="all_title_row">
+        <img src="image/pick-icon.svg" alt="위치">
+        <h2>추천 코스</h2>
+      </div>           
+    </div>
+    </div>
+
+    <!-- (전체) 탭 + 노선도 이미지 + 카드 UI  -->
+  <section class="course" id="course">
+
+  <!-- ✅ 탭 버튼은 1번만(공용) -->
+  <div class="course-toggle floating" role="tablist" aria-label="코스 선택">
+    <button type="button" class="course-btn active Pretendard"
+      role="tab" aria-selected="true" aria-controls="course-panel-1" data-course="1">
+      1코스
+    </button>
+
+    <button type="button" class="course-btn Pretendard"
+      role="tab" aria-selected="false" aria-controls="course-panel-2" data-course="2">
+      2코스
+    </button>
+
+    <button type="button" class="course-btn Pretendard"
+      role="tab" aria-selected="false" aria-controls="course-panel-3" data-course="3">
+      3코스
+    </button>
+  </div>
+
+  <!-- 패널들 -->
+  <div class="course-panels">
+    <!-- ✅ 1코스 (노선도 + 카드 = 한 묶음) -->
+    <section class="course-panel active" id="course-panel-1" role="tabpanel" aria-label="1코스">
+      <div class="route-map">
+        <h3 class="sr-only">1코스 관람 동선 지도</h3>
+        <img src="image/walk_guide.png" alt="1코스 관람 동선">
+      </div>
+
+      <div class="card-flex2">
+        <!-- 1코스 카드 5개 -->
+        <a class="pick-card" href="#">
+          <figure class="thumb"><img src="image/pick-card1.jpg" alt="사계절 전시 온실" loading="lazy"></figure>
+          <div class="info">
+            <div class="info-up"><h3 class="title">사계절 전시 온실</h3><span class="tag">자세히보기</span></div>
+            <p class="desc">우리가 아끼고 본전해야하는 우리나라 식물</p>
+          </div>
+        </a>
+        <a class="pick-card" href="#">
+            <figure class="thumb">
+              <img src="image/pick-card2.jpg" alt="한국 전통 정원" loading="lazy">
+            </figure>
+            <div class="info">
+              <div class="info-up">
+                <h3 class="title">한국 전통 정원</h3>
+                <span class="tag">자세히보기</span>
+              </div>
+              <p class="desc">우리가 아끼고 본전해야하는 우리나라 식물</p>
+            </div>
+          </a>
+
+          <a class="pick-card" href="#">
+            <figure class="thumb">
+              <img src="image/pick-card3.jpg" alt="분재 전시관" loading="lazy">
+            </figure>
+            <div class="info">
+              <div class="info-up">
+                <h3 class="title">분재 전시관</h3>
+                <span class="tag">자세히보기</span>
+              </div>
+              <p class="desc">우리가 아끼고 본전해야하는 우리나라 식물</p>
+            </div>
+          </a>
+
+          <a class="pick-card" href="#">
+            <figure class="thumb">
+              <img src="image/pick-card4.jpg" alt="어린이 정원" loading="lazy">
+            </figure>
+            <div class="info">
+              <div class="info-up">
+                <h3 class="title">어린이 정원</h3>
+                <span class="tag">자세히보기</span>
+              </div>
+              <p class="desc">우리가 아끼고 본전해야하는 우리나라 식물</p>
+            </div>
+          </a>
+
+          <a class="pick-card" href="#">
+            <figure class="thumb">
+              <img src="image/pick-card5.jpg" alt="생활 정원" loading="lazy">
+            </figure>
+            <div class="info">
+              <div class="info-up">
+                <h3 class="title">생활 정원</h3>
+                <span class="tag">자세히보기</span>
+              </div>
+              <p class="desc">우리가 아끼고 본전해야하는 우리나라 식물</p>
+            </div>
+          </a>
+        <!-- 나머지 카드들 그대로... -->
+      </div>
+    </section>
+
+    <!-- ✅ 2코스 (노선도 + 카드 = 한 묶음) -->
+    <section class="course-panel" id="course-panel-2" role="tabpanel" aria-label="2코스" hidden>
+      <div class="route-map">
+        <h3 class="sr-only">2코스 관람 동선 지도</h3>
+        <img src="image/walk_guide.png" alt="2코스 관람 동선">
+      </div>
+
+      <div class="card-flex2">
+        <!-- 2코스 카드 5개 -->
+        <a class="pick-card" href="#">
+          <figure class="thumb"><img src="image/pick-card1.jpg" alt="사계절 전시 온실" loading="lazy"></figure>
+          <div class="info">
+            <div class="info-up"><h3 class="title">사계절 전시 온실</h3><span class="tag">자세히보기</span></div>
+            <p class="desc">우리가 아끼고 본전해야하는 우리나라 식물</p>
+          </div>
+        </a>
+        <a class="pick-card" href="#">
+          <figure class="thumb"><img src="image/pick-card2.jpg" alt="사계절 전시 온실" loading="lazy"></figure>
+          <div class="info">
+            <div class="info-up"><h3 class="title">한국 전통 정원</h3><span class="tag">자세히보기</span></div>
+            <p class="desc">우리가 아끼고 본전해야하는 우리나라 식물</p>
+          </div>
+        </a>
+        <a class="pick-card" href="#">
+          <figure class="thumb"><img src="image/pick-card3.jpg" alt="사계절 전시 온실" loading="lazy"></figure>
+          <div class="info">
+            <div class="info-up"><h3 class="title">분재 전시관</h3><span class="tag">자세히보기</span></div>
+            <p class="desc">우리가 아끼고 본전해야하는 우리나라 식물</p>
+          </div>
+        </a>
+        <a class="pick-card" href="#">
+          <figure class="thumb"><img src="image/pick-card6.jpg" alt="사계절 전시 온실" loading="lazy"></figure>
+          <div class="info">
+            <div class="info-up"><h3 class="title">희귀특산식물 전시 온실</h3><span class="tag">자세히보기</span></div>
+            <p class="desc">우리가 아끼고 본전해야하는 우리나라 식물</p>
+          </div>
+        </a>
+        <a class="pick-card" href="#">
+          <figure class="thumb"><img src="image/pick-card4.jpg" alt="사계절 전시 온실" loading="lazy"></figure>
+          <div class="info">
+            <div class="info-up"><h3 class="title">어린이 정원</h3><span class="tag">자세히보기</span></div>
+            <p class="desc">우리가 아끼고 본전해야하는 우리나라 식물</p>
+          </div>
+        </a>
+        <a class="pick-card" href="#">
+          <figure class="thumb"><img src="image/pick-card5.jpg" alt="사계절 전시 온실" loading="lazy"></figure>
+          <div class="info">
+            <div class="info-up"><h3 class="title">생활 정원</h3><span class="tag">자세히보기</span></div>
+            <p class="desc">우리가 아끼고 본전해야하는 우리나라 식물</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ✅ 3코스 (노선도 + 카드 = 한 묶음) -->
+    <section class="course-panel" id="course-panel-3" role="tabpanel" aria-label="3코스" hidden>
+      <div class="route-map">
+        <h3 class="sr-only">3코스 관람 동선 지도</h3>
+        <img src="image/walk_guide.png" alt="3코스 관람 동선">
+      </div>
+
+      <div class="card-flex2">
+        <!-- 3코스 카드 5개 -->
+        <a class="pick-card" href="#">
+          <figure class="thumb"><img src="image/pick-card1.jpg" alt="사계절 전시 온실" loading="lazy"></figure>
+          <div class="info">
+            <div class="info-up"><h3 class="title">사계절 전시 온실</h3><span class="tag">자세히보기</span></div>
+            <p class="desc">우리가 아끼고 본전해야하는 우리나라 식물</p>
+          </div>
+        </a>
+        <a class="pick-card" href="#">
+          <figure class="thumb"><img src="image/pick-card2.jpg" alt="사계절 전시 온실" loading="lazy"></figure>
+          <div class="info">
+            <div class="info-up"><h3 class="title">한국 전통 정원</h3><span class="tag">자세히보기</span></div>
+            <p class="desc">우리가 아끼고 본전해야하는 우리나라 식물</p>
+          </div>
+        </a>
+        <a class="pick-card" href="#">
+          <figure class="thumb"><img src="image/pick-card3.jpg" alt="사계절 전시 온실" loading="lazy"></figure>
+          <div class="info">
+            <div class="info-up"><h3 class="title">분재 전시관</h3><span class="tag">자세히보기</span></div>
+            <p class="desc">우리가 아끼고 본전해야하는 우리나라 식물</p>
+          </div>
+        </a>
+        <a class="pick-card" href="#">
+          <figure class="thumb"><img src="image/pick-card6.jpg" alt="사계절 전시 온실" loading="lazy"></figure>
+          <div class="info">
+            <div class="info-up"><h3 class="title">희귀특산식물 전시 온실</h3><span class="tag">자세히보기</span></div>
+            <p class="desc">우리가 아끼고 본전해야하는 우리나라 식물</p>
+          </div>
+        </a>
+        <a class="pick-card" href="#">
+          <figure class="thumb"><img src="image/pick-card7.jpg" alt="사계절 전시 온실" loading="lazy"></figure>
+          <div class="info">
+            <div class="info-up"><h3 class="title">양서류 관찰원</h3><span class="tag">자세히보기</span></div>
+            <p class="desc">우리가 아끼고 본전해야하는 우리나라 식물</p>
+          </div>
+        </a>
+        <a class="pick-card" href="#">
+          <figure class="thumb"><img src="image/pick-card8.jpg" alt="사계절 전시 온실" loading="lazy"></figure>
+          <div class="info">
+            <div class="info-up"><h3 class="title">무궁화원</h3><span class="tag">자세히보기</span></div>
+            <p class="desc">우리가 아끼고 본전해야하는 우리나라 식물</p>
+          </div>
+        </a>
+        <a class="pick-card" href="#">
+          <figure class="thumb"><img src="image/pick-card9.jpg" alt="사계절 전시 온실" loading="lazy"></figure>
+          <div class="info">
+            <div class="info-up"><h3 class="title">민속 식물원</h3><span class="tag">자세히보기</span></div>
+            <p class="desc">우리가 아끼고 본전해야하는 우리나라 식물</p>
+          </div>
+        </a>
+        <a class="pick-card" href="#">
+          <figure class="thumb"><img src="image/pick-card10.jpg" alt="사계절 전시 온실" loading="lazy"></figure>
+          <div class="info">
+            <div class="info-up"><h3 class="title">단풍나무원</h3><span class="tag">자세히보기</span></div>
+            <p class="desc">우리가 아끼고 본전해야하는 우리나라 식물</p>
+          </div>
+        </a>
+      </div>
+    </section>
+  </div>
+
+  </section> 
+</section>  
+
+
+  <!-- /// 수목원의 포토스팟 /// -->
+  <section class="photo_con">
+    <div class="all_left">
+    <div class="all_header">
+      <div class="all_title">
+        <img src="image/photo-icon.svg" alt="카메라" class="all_title_row">
+        <!-- column flex -->
+        <div class="all_title_col">
+        <h2>수목원의 포토스팟</h2>
+        <p>사계절 자연 속에서 특별한 순간을 남겨보세요.</p>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <div class="photo-spot__list" role="list">
+    
+    <!-- 카드 1 -->
+    <article class="spot-card" role="listitem">
+      <a class="spot-card__link" href="#">
+        <figure class="spot-card__thumb">
+          <img src="image/spot1.png" alt="한국전통정원 전경" loading="lazy">
+        </figure>
+
+        <div class="spot-card__body">
+          <div class="spot-card__row">
+            <span class="spot-card__tag">한국 전통 정원</span>
+            <span class="spot-card__avatar">
+              <img src="image/photo-spot-icon.svg" alt="plus icon">
+            </span>
+          </div>
+
+          <h3 class="spot-card__title">수목원 대표 상징 스팟</h3>
+          <p class="spot-card__meta">전경·계단·정원 구도 추천</p>
+          <p class="spot-card__time">추천 시간 : 오전 10-12시</p>
+        </div>
+      </a>
+    </article>
+
+    <!-- 카드 2 -->
+    <article class="spot-card" role="listitem">
+      <a class="spot-card__link" href="#">
+        <figure class="spot-card__thumb">
+          <img src="image/spot2.png" alt="사계절 온실 내부" loading="lazy">
+        </figure>
+
+        <div class="spot-card__body">
+          <div class="spot-card__row">
+            <span class="spot-card__tag">사계절 전시 온실</span>
+            <span class="spot-card__avatar">
+              <img src="image/photo-spot-icon.svg" alt="plus icon">
+            </span>
+          </div>
+
+          <h3 class="spot-card__title">실내 자연 몰입 스팟</h3>
+          <p class="spot-card__meta">암석 프레임 · 인물 촬영 추천</p>
+          <p class="spot-card__time">추천 시간 : 오전·오후 모두</p>
+        </div>
+      </a>
+    </article>
+
+    <!-- 카드 3 -->
+    <article class="spot-card" role="listitem">
+      <a class="spot-card__link" href="#">
+        <figure class="spot-card__thumb">
+          <img src="image/spot3.png" alt="사계절 온실 내부" loading="lazy">
+        </figure>
+
+        <div class="spot-card__body">
+          <div class="spot-card__row">
+            <span class="spot-card__tag">전통정원 가는 길</span>
+            <span class="spot-card__avatar">
+              <img src="image/photo-spot-icon.svg" alt="plus icon">
+            </span>
+          </div>
+
+          <h3 class="spot-card__title">산책형 감성 스팟</h3>
+          <p class="spot-card__meta">측면 인물 · 자연스러운 컷</p>
+          <p class="spot-card__time">추천 시간 : 오후 3-5시</p>
+        </div>
+      </a>
+    </article>
+
+    <!-- 카드 4 -->
+    <article class="spot-card" role="listitem">
+      <a class="spot-card__link" href="#">
+        <figure class="spot-card__thumb">
+          <img src="image/spot4.png" alt="사계절 온실 내부" loading="lazy">
+        </figure>
+
+        <div class="spot-card__body">
+          <div class="spot-card__row">
+            <span class="spot-card__tag">갈대 앞 산책 구간</span>
+            <span class="spot-card__avatar">
+              <img src="image/photo-spot-icon.svg" alt="plus icon">
+            </span>
+          </div>
+
+          <h3 class="spot-card__title">계절 풍경 대표 스팟</h3>
+          <p class="spot-card__meta">실루엣 · 여백 구도 추천</p>
+          <p class="spot-card__time">추천 시간 : 오후 4-6시</p>
+        </div>
+      </a>
+    </article>
+
+    </div>
+
+
+  </section> 
+
+
+  <!-- /// 푸터 - 마지막 섹션 /// -->
+
+    <footer class="footer-con">
+      <div class="title-left Pretendard">
+        <p class="title-sub fs-20">도심 속, 살아있는 식물의 쉼터</p>
+        <h2 class="fs-45">국립 세종 수목원</h2>
+        <span>문의 044.251.0001</span>
+      </div>
+      <span class="deco-line"></span>
+      <nav class="sns-list">
+        <a class="sns-icon" href="#" aria-label="Instagram">
+          <img src="image/insta.svg" alt="인스타그램">
+        </a>
+        <a class="sns-icon" href="#" aria-label="Facebook">
+          <img src="image/facebook.svg" alt="페이스북">
+      </a>
+        <a class="sns-icon" href="#" aria-label="YouTube">
+          <img src="image/youtube.svg" alt="유튜브">
+        </a>
+        <a class="sns-icon" href="#" aria-label="Blog">
+          <img src="image/blog.svg" alt="블로그       ">
+        </a>
+      </nav>
+      <div class="ex-txt">
+        <span>이용약관</span>
+        <span>개인정보처리방침</span>
+        <span>영상정보처리기기 운영/방침</span>
+        <span>윤리경영</span>
+      </div>
+      <div class="ex-txt2">
+        <span>30106 세종특별자치시 연기면 수목원로 136 국립세종수목원</span>
+        <span>@ 국립세종수목원. All Rights Reserved.</span>
+      </div>
+    </footer>
+  
+  </div> 
+  
+  </main>
+
+  
+  
+
+</body>
+</html>

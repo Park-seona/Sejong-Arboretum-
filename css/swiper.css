@@ -1,0 +1,232 @@
+html, body {
+    position: relative;
+    height: 100%;
+}
+
+body {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ===== 메인 이미지 슬라이드 ===== */
+.mainSwiper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.mainSwiper .swiper-slide{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.main-slide-img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+
+/* 화살표 - 크기 조정 */
+.mainSwiper .swiper-button-prev,
+.mainSwiper .swiper-button-next {
+  width: 34px;
+  height: 34px;
+}
+
+.mainSwiper .swiper-button-prev::after,
+.mainSwiper .swiper-button-next::after {
+  font-size: 14px;
+}
+
+
+/* 화살표 아이콘 색상 */
+.mainSwiper .swiper-button-next,
+.mainSwiper .swiper-button-prev {
+  position: absolute;
+  left: -60px;
+  color: #ffffff;          /* 기본 화살표 색 */
+}
+
+/* hover 시 */
+.mainSwiper .swiper-button-next:hover,
+.mainSwiper .swiper-button-prev:hover {
+  color: #ffd966;          /* 포인트 컬러 */
+}
+
+.mainSwiper { position: relative; }
+
+/* ✅ (혹시 남아있다면) Swiper 기본 화살표 완전 제거 */
+.mainSwiper .swiper-button-next,
+.mainSwiper .swiper-button-prev {
+  display: none !important;
+}
+.mainSwiper .swiper-button-next::after,
+.mainSwiper .swiper-button-prev::after{
+  display: none !important;
+  content: none !important;
+}
+
+/* ✅ 커스텀 버튼 */
+.mainSwiper .nav-btn{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  width: 52px;
+  height: 52px;
+  border: 0;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.28);
+  color: #fff;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  transition: background-color .2s ease, transform .2s ease, opacity .2s ease;
+}
+
+.mainSwiper .nav-btn:hover{
+  background-color: rgba(255, 255, 255, 0.4);
+  color: #ffca2c;
+  transform: translateY(-50%) scale(1.02);
+}
+
+.mainSwiper .nav-btn:active{
+  transform: translateY(-50%) scale(.98);
+}
+
+/* ✅ 좌/우 위치 */
+.mainSwiper .nav-prev{ left: 24px; }
+.mainSwiper .nav-next{ right: 24px; }
+
+/* ✅ SVG 아이콘 크기 (원하는대로) */
+.mainSwiper .nav-ic{
+  width: 32px;
+  height: 32px;
+}
+
+/* ✅ disabled 상태(첫/마지막에서) 표시 */
+.mainSwiper .nav-btn.is-disabled{
+  opacity: .35;
+  pointer-events: none;
+}
+
+/* (옵션) 모바일에선 더 작게 */
+@media (max-width: 768px){
+  .mainSwiper .nav-btn{
+    width: 38px;
+    height: 38px;
+  }
+  .mainSwiper .nav-ic{
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+/* 하단 좌측 정렬 예시 */
+.mainSwiper .swiper-button-prev{
+  left: 32px !important;
+  right: auto !important;
+}
+.mainSwiper .swiper-button-next{
+  left: 92px !important;
+  right: auto !important;
+}
+
+
+
+/* 페이지네이션 - 색상+위치 선정 */
+.mainSwiper .swiper-pagination{
+  bottom: 36px !important;
+}
+
+.mainSwiper .swiper-pagination-bullet{
+  opacity: 1 !important;
+  background: rgba(255,255,255,.5) !important;
+}
+
+.mainSwiper .swiper-pagination-bullet-active{
+  background: #ffd966 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ===== 전시 및 행사 ===== */
+.exhibitSwiper {
+  width: 100%;
+  height: 100%;
+}
+
+/* Swiper wrapper */
+.exhibitSwiper .swiper-wrapper {
+  display: flex;
+  /* width: 1472px;
+  height: 538px; */
+}
+
+/* Swiper slide */
+.exhibitSwiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 370px;
+}
+
+/* 카드 */
+.exhibitSwiper .swiper-slide .card {
+  display: block;
+  width: 370px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.exhibitSwiper .card img {
+  border-radius: 15px;
+}
+
+
+/* ===== 스크롤바 ===== */
+/* 기본 상태: 숨김 */
+.exhibitSwiper .swiper-scrollbar {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+/* hover 시 표시 */
+.exhibitSwiper:hover .swiper-scrollbar {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* 스크롤바 스타일 */
+.exhibitSwiper .swiper-scrollbar {
+  background: rgba(255, 255, 255, 0.25);
+  height: 8px;
+  border-radius: 999px;
+}
+
+.exhibitSwiper .swiper-scrollbar-drag {
+  background: #fff;
+  border-radius: 999px;
+}
+
+
+
+
