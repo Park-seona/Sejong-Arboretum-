@@ -1,0 +1,648 @@
+/* ===== (PC -> Tablet까지) 768px 이후 ~ ===== */
+@media screen and (min-width: 768px) {
+    .mobile_menu_toggle {
+       position: relative;
+       width: 44px;
+       height: 44px;
+       cursor: pointer;
+       z-index: 999;
+    }
+
+    .mobile_menu_toggle img {
+       width: 100%;
+       height: 100%;
+       object-fit: contain;
+       display: block;
+    }
+
+    .all_header {
+        margin-left: 0;
+    }
+
+}
+
+/* ===== 1200px 이하 ===== */
+@media screen and (max-width: 1200px) {
+    .mega {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .main-banner {
+        width: 100%;
+        height: auto;
+    }
+
+    .all_header {
+        margin-left: 0;
+    }
+
+    .route-map img {
+        display: inline-block;
+        width: 80%;
+        height: auto;
+        margin-top: 40px;
+    }
+
+    .event_con {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3.13rem;
+        padding: 85px 40px;
+    }
+
+    .all_title_col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .april_con {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 85px 40px;
+    }
+
+    .spring-tabs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .pick_con {
+        padding: 85px 40px;
+    }
+
+    .course {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 40px;
+    }
+
+    .course-toggle {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+
+    .course-toggle.floating {
+        position: static;
+        margin-top: 40px;
+    }
+
+    .all_header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .photo_con {
+        padding: 85px 40px;
+    }
+
+    .deco-line {
+        width: 855px;
+    }
+}
+
+
+
+
+/* ===== 1024px 이하 (태블릿) ===== */
+@media screen and (max-width: 1024px) and (min-width: 768px){
+    .event_con {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3.13rem;
+        padding: 85px 40px;
+    }
+    
+    .header-box{
+       padding: 12px 16px;
+       gap: 14px;
+       display: flex;
+       justify-content: space-between;
+    }
+
+    .gnb {
+      justify-content:flex-start;
+      flex-wrap:wrap;
+      gap: 10px;
+    }
+
+    /* 모바일에서는 hover UX가 별로라서 기본적으로 메가를 닫아두는 편 */
+    .mega {
+      display: none;
+    }
+
+    .pc-nav {
+        display: none;
+    }
+
+    #mobile-nav {
+       width: 100%;
+    }
+
+    #mobile-nav header {
+       display: flex;
+       justify-content: flex-end;
+       align-items: center;
+       height: 60px;
+    }
+
+    #mobile-nav #close {
+       width: 40px;
+       height: 40px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       cursor: pointer;
+       z-index: 1000;
+    }
+
+    #mobile-nav #close img {
+       width: 100%;
+       height: 100%;
+       object-fit: contain;
+    }
+
+    .mobile_menu_toggle {
+       display: block;
+       position: relative;
+       width: 44px;
+       height: 44px;
+       cursor: pointer;
+       z-index: 999;
+       background-color: #fff;
+       border: 0;
+    }
+
+    .mobile_menu_toggle img {
+       width: 100%;
+       height: 100%;
+       object-fit: contain;
+       display: block;
+    }
+
+    .quick-box-wrap {
+        gap: 2rem;
+    }
+
+    .quick-box-flex {
+       display: flex;
+       gap: 2rem;
+    }
+
+    .april_con {
+        gap: 2.5rem;
+        padding: 85px 40px;
+    }
+
+    .exhibitSwiper .swiper-slide {
+        padding-left: 0;
+    }
+
+    .pick_con {
+        padding: 85px 40px;
+    }
+
+    .course {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 40px;
+    }
+
+    .course-toggle {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+
+    .course-toggle.floating {
+        position: static;
+        margin-top: 40px;
+    }
+
+    .photo_con {
+        padding: 85px 40px;
+    }
+
+    .all_header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .spring-card-flex {
+        margin-top: 20px;
+    }
+
+    .spot-card-wrap {
+        display: flex;
+        gap: 4rem;
+    }
+    
+
+    .footer-con {
+        display: block;
+    }
+
+    .footer-all-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .title-left {
+        position: static;
+        align-items: center;
+        gap: 1.875rem;
+    }
+
+    .title-call-wrap {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.625rem;
+    }
+
+    .deco-line {
+        position: static;
+        width: 895px;
+        margin: 28px auto;
+    }
+
+    .sns-list {
+        position: static;
+        display: flex;
+        justify-content: center;
+    }
+
+    .ex-txt {
+        position: static;
+        display: flex;
+        justify-content: center;
+    }
+
+    .ex-txt2 {
+        position: static;
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+
+
+
+/* ===== 768px 이하 (모바일 큰 화면) ===== */
+@media screen and (max-width: 768px){
+    .all_title_col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .all_title_col img {
+        width: 36px;
+        height: 36px;
+        max-width: none;
+    }
+
+    .all_title_row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .all_title_col h2,
+    .all_title_row h2,
+    .all_title_row2 h2 {
+        font-size: 1.75rem;
+    }
+
+    .all_title_col p,
+    .all_title p {
+        font-size: 1rem;
+    }
+
+    .quick-box-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .quick-box-flex {
+       display: flex;
+       gap: 2.875rem;
+    }
+
+    .quick-box span {
+        font-size: 16px;
+    }
+
+    .event_con {
+        display: flex;
+        flex-direction: column;
+        gap: 3.13rem;
+        padding: 85px 40px;
+    }
+    
+    .header-box{
+       padding: 12px 16px;
+       gap: 14px;
+       display: flex;
+       justify-content: space-between;
+    }
+
+    .gnb {
+      justify-content:flex-start;
+      flex-wrap:wrap;
+      gap: 10px;
+    }
+
+    /* 모바일에서는 hover UX가 별로라서 기본적으로 메가를 닫아두는 편 */
+    .mega {
+        display: none;
+    }
+
+    .pc-nav {
+        display: none;
+    }
+
+    #mobile-nav {
+       width: 100%;
+    }
+
+    #mobile-nav header {
+       display: flex;
+       justify-content: flex-end;
+       align-items: center;
+       height: 60px;
+    }
+
+    #mobile-nav #close {
+       width: 40px;
+       height: 40px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       cursor: pointer;
+       z-index: 1000;
+    }
+
+    #mobile-nav #close img {
+       width: 100%;
+       height: 100%;
+       object-fit: contain;
+    }
+
+    .mobile_menu_toggle {
+       display: block;
+       position: relative;
+       width: 44px;
+       height: 44px;
+       cursor: pointer;
+       z-index: 999;
+       background-color: #fff;
+       border: 0;
+    }
+
+    .mobile_menu_toggle img {
+       width: 100%;
+       height: 100%;
+       object-fit: contain;
+       display: block;
+    }
+
+    .april_con {
+        gap: 2.5rem;
+        padding: 85px 40px;
+    }
+
+    .exhibitSwiper .swiper-slide {
+        padding-left: 0;
+    }
+
+    .pick_con {
+        padding: 85px 40px;
+    }
+
+    .course {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        /* padding: 0 40px; */
+    }
+
+    .course-toggle {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+
+    .course-toggle.floating {
+        position: static;
+        margin-top: 40px;
+    }
+
+    .photo_con {
+        padding: 85px 40px;
+    }
+
+ 
+
+    .spring-card-flex {
+        margin-top: 20px;
+    }
+
+    .spot-card-wrap {
+        display: flex;
+        gap: 2rem;
+    }
+    
+
+    .pc-nav {
+        display: none;
+    }
+
+    #mobile-nav {
+        width: 100%;
+    }
+
+    #mobile-nav header {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        height: 60px;
+        border-bottom: 1px solid var(--black);
+    }
+
+    #mobile-nav #close {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    #mobile-nav #close img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .mobile_menu_toggle {
+        display: block;
+        position: relative;
+        width: 44px;
+        height: 44px;
+        cursor: pointer;
+        z-index: 999;
+        background-color: #fff;
+        border: 0;
+    }
+
+    .mobile_menu_toggle img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .route-map img {
+        display: inline-block;
+        width: 80%;
+        height: auto;
+        margin-top: 40px;
+    }
+
+    .footer-con {
+        display: block;
+    }
+
+    .footer-all-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .title-left {
+        position: static;
+        align-items: center;
+        gap: 1.875rem;
+    }
+
+    .title-call-wrap {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.625rem;
+    }
+
+    .deco-line {
+        position: static;
+        width: 695px;
+        margin: 28px auto;
+    }
+
+    .sns-list {
+        position: static;
+        display: flex;
+        justify-content: center;
+    }
+
+    .ex-txt {
+        position: static;
+        display: flex;
+        justify-content: center;
+    }
+
+    .ex-txt2 {
+        position: static;
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+
+
+
+
+/* ===== 480px 이하 (모바일) ===== */
+@media screen and (max-width: 480px) {
+    
+    .photo_con {
+        padding: 85px 40px;
+    }
+
+    .spot-card-wrap {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-con {
+        display: block;
+    }
+
+    .footer-all-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .title-left {
+        position: static;
+        align-items: center;
+        gap: 1.875rem;
+    }
+
+    .title-call-wrap {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.625rem;
+    }
+
+    .deco-line {
+        position: static;
+        width: 325px;
+        margin: 14px auto;
+    }
+
+    .sns-list {
+        position: static;
+        display: flex;
+        justify-content: center;
+    }
+
+    .ex-txt {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .ex-txt2 {
+        position: static;
+        display: flex;
+        justify-content: center;
+    }
+}

@@ -36,7 +36,7 @@
     </div>
 
     <!-- 2) NAV -->
-    <div class="box nav-box">
+    <div class="pc-nav box nav-box">
       <nav class="gnb-nav" aria-label="주요 메뉴">
         <ul class="gnb">
           <!-- 관람 안내 -->
@@ -304,18 +304,49 @@
     </div>
 
     <!-- 3) RIGHT AREA (기존 "3" 자리) -->
-    <div class="box right-box">
+    <div class="pc-nav box right-box">
       <!-- 원하는대로 바꾸면 됨 -->
-      <a class="action" href="#">예약하기</a>
-      <a class="action" href="#">검색</a>
+      <!-- <a class="action" href="#">예약하기</a> -->
+      <a class="action" href="#">
+        <img src="image/search.svg" alt="검색">
+      </a>
     </div>
 
     <span class="gnb-indicator" aria-hidden="true"></span>
+
+    <!-- 모바일 : 햄버거 메뉴 아이콘 -->
+    <nav class="mobile-icon">
+        <button class="mobile_menu_toggle">
+            <img src="image/mobile_toggle_btn.svg" alt="mobile toggle button">
+        </button>
+    </nav>
+
   </div> <!-- header-box 끝 -->
   </header>
 
+  <!-- 모바일 메뉴 -->
+  <aside id="mobile-nav">
+        <header>
+            <button id="close">
+                <img src="image/mobile_menu_close.svg" alt="mobile menu close">
+            </button>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="https://">관람 안내</a></li>
+                <li><a href="https://">전시</a></li>
+                <li><a href="https://">교육</a></li>
+                <li><a href="https://">연구</a></li>
+                <li><a href="https://">반려식물</a></li>
+            </ul>
+        </nav>
+  </aside>
+  
+  <!-- 모바일 블러창 -->
+  <div class="menu-overlay"></div>
+
 <!-- ===== (선택) 이하 페이지 콘텐츠 ===== -->
-  <main>
+<main>
     <!-- /// 메인 이미지 슬라이드 (스와이퍼) /// -->
   <div class="swiper mainSwiper">
     <div class="swiper-wrapper">
@@ -356,21 +387,25 @@
 <!-- /// 퀵메뉴 /// -->
   <div class="quick-wrap">
     <div class="quick-box-wrap">
-      <div class="quick-box">
-        <img src="image/quick-menu-01.svg" alt="아이콘1">
-        <span class="fs-18">관람 안내</span>
+      <div class="quick-box-flex">
+        <div class="quick-box">
+          <img src="image/quick-menu-01.svg" alt="아이콘1">
+          <span class="fs-18">관람 안내</span>
+        </div>
+        <div class="quick-box">
+          <img src="image/quick-menu-02.svg" alt="아이콘2">
+          <span class="fs-18">오시는 길</span>
+        </div>
       </div>
-      <div class="quick-box">
-        <img src="image/quick-menu-02.svg" alt="아이콘2">
-        <span class="fs-18">오시는 길</span>
-      </div>
-      <div class="quick-box">
-        <img src="image/quick-menu-03.svg" alt="아이콘3">
-        <span class="fs-18">전시원 안내</span>
-      </div>
-      <div class="quick-box">
-        <img src="image/quick-menu-04.svg" alt="아이콘4">
-        <span class="fs-18">통합 예약</span>
+      <div class="quick-box-flex">
+        <div class="quick-box">
+          <img src="image/quick-menu-03.svg" alt="아이콘3">
+          <span class="fs-18">전시원 안내</span>
+        </div>
+        <div class="quick-box">
+          <img src="image/quick-menu-04.svg" alt="아이콘4">
+          <span class="fs-18">통합 예약</span>
+        </div>
       </div>
     </div>
   </div>
@@ -820,12 +855,11 @@
     <div class="all_left">
     <div class="all_header">
       <div class="all_title">
-        <img src="image/photo-icon.svg" alt="카메라" class="all_title_row">
-        <!-- column flex -->
-        <div class="all_title_col">
+        <div class="all_title_row2">
+        <img src="image/photo-icon.svg" alt="카메라">
         <h2>수목원의 포토스팟</h2>
-        <p>사계절 자연 속에서 특별한 순간을 남겨보세요.</p>
         </div>
+        <p>사계절 자연 속에서 특별한 순간을 남겨보세요.</p>
       </div>
     </div>
     </div>
@@ -833,137 +867,148 @@
     <div class="photo-spot__list" role="list">
     
     <!-- 카드 1 -->
-    <article class="spot-card" role="listitem">
-      <a class="spot-card__link" href="#">
-        <figure class="spot-card__thumb">
-          <img src="image/spot1.png" alt="한국전통정원 전경" loading="lazy">
-        </figure>
-
-        <div class="spot-card__body">
-          <div class="spot-card__row">
-            <span class="spot-card__tag">한국 전통 정원</span>
-            <span class="spot-card__avatar">
-              <img src="image/photo-spot-icon.svg" alt="plus icon">
-            </span>
+    <div class="spot-card-wrap">
+      <article class="spot-card" role="listitem">
+        <a class="spot-card__link" href="#">
+          <figure class="spot-card__thumb">
+            <img src="image/spot1.png" alt="한국전통정원 전경" loading="lazy">
+          </figure>
+  
+          <div class="spot-card__body">
+            <div class="spot-card__row">
+              <span class="spot-card__tag">한국 전통 정원</span>
+              <span class="spot-card__avatar">
+                <img src="image/photo-spot-icon.svg" alt="plus icon">
+              </span>
+            </div>
+  
+            <h3 class="spot-card__title">수목원 대표 상징 스팟</h3>
+            <p class="spot-card__meta">전경·계단·정원 구도 추천</p>
+            <p class="spot-card__time">추천 시간 : 오전 10-12시</p>
           </div>
-
-          <h3 class="spot-card__title">수목원 대표 상징 스팟</h3>
-          <p class="spot-card__meta">전경·계단·정원 구도 추천</p>
-          <p class="spot-card__time">추천 시간 : 오전 10-12시</p>
-        </div>
-      </a>
-    </article>
-
-    <!-- 카드 2 -->
-    <article class="spot-card" role="listitem">
-      <a class="spot-card__link" href="#">
-        <figure class="spot-card__thumb">
-          <img src="image/spot2.png" alt="사계절 온실 내부" loading="lazy">
-        </figure>
-
-        <div class="spot-card__body">
-          <div class="spot-card__row">
-            <span class="spot-card__tag">사계절 전시 온실</span>
-            <span class="spot-card__avatar">
-              <img src="image/photo-spot-icon.svg" alt="plus icon">
-            </span>
+        </a>
+      </article>
+  
+      <!-- 카드 2 -->
+      <article class="spot-card" role="listitem">
+        <a class="spot-card__link" href="#">
+          <figure class="spot-card__thumb">
+            <img src="image/spot2.png" alt="사계절 온실 내부" loading="lazy">
+          </figure>
+  
+          <div class="spot-card__body">
+            <div class="spot-card__row">
+              <span class="spot-card__tag">사계절 전시 온실</span>
+              <span class="spot-card__avatar">
+                <img src="image/photo-spot-icon.svg" alt="plus icon">
+              </span>
+            </div>
+  
+            <h3 class="spot-card__title">실내 자연 몰입 스팟</h3>
+            <p class="spot-card__meta">암석 프레임 · 인물 촬영 추천</p>
+            <p class="spot-card__time">추천 시간 : 오전·오후 모두</p>
           </div>
-
-          <h3 class="spot-card__title">실내 자연 몰입 스팟</h3>
-          <p class="spot-card__meta">암석 프레임 · 인물 촬영 추천</p>
-          <p class="spot-card__time">추천 시간 : 오전·오후 모두</p>
-        </div>
-      </a>
-    </article>
+        </a>
+      </article>
+    </div>
 
     <!-- 카드 3 -->
-    <article class="spot-card" role="listitem">
-      <a class="spot-card__link" href="#">
-        <figure class="spot-card__thumb">
-          <img src="image/spot3.png" alt="사계절 온실 내부" loading="lazy">
-        </figure>
-
-        <div class="spot-card__body">
-          <div class="spot-card__row">
-            <span class="spot-card__tag">전통정원 가는 길</span>
-            <span class="spot-card__avatar">
-              <img src="image/photo-spot-icon.svg" alt="plus icon">
-            </span>
+    <div class="spot-card-wrap">
+      <article class="spot-card" role="listitem">
+        <a class="spot-card__link" href="#">
+          <figure class="spot-card__thumb">
+            <img src="image/spot3.png" alt="사계절 온실 내부" loading="lazy">
+          </figure>
+  
+          <div class="spot-card__body">
+            <div class="spot-card__row">
+              <span class="spot-card__tag">전통정원 가는 길</span>
+              <span class="spot-card__avatar">
+                <img src="image/photo-spot-icon.svg" alt="plus icon">
+              </span>
+            </div>
+  
+            <h3 class="spot-card__title">산책형 감성 스팟</h3>
+            <p class="spot-card__meta">측면 인물 · 자연스러운 컷</p>
+            <p class="spot-card__time">추천 시간 : 오후 3-5시</p>
           </div>
-
-          <h3 class="spot-card__title">산책형 감성 스팟</h3>
-          <p class="spot-card__meta">측면 인물 · 자연스러운 컷</p>
-          <p class="spot-card__time">추천 시간 : 오후 3-5시</p>
-        </div>
-      </a>
-    </article>
-
-    <!-- 카드 4 -->
-    <article class="spot-card" role="listitem">
-      <a class="spot-card__link" href="#">
-        <figure class="spot-card__thumb">
-          <img src="image/spot4.png" alt="사계절 온실 내부" loading="lazy">
-        </figure>
-
-        <div class="spot-card__body">
-          <div class="spot-card__row">
-            <span class="spot-card__tag">갈대 앞 산책 구간</span>
-            <span class="spot-card__avatar">
-              <img src="image/photo-spot-icon.svg" alt="plus icon">
-            </span>
+        </a>
+      </article>
+  
+      <!-- 카드 4 -->
+      <article class="spot-card" role="listitem">
+        <a class="spot-card__link" href="#">
+          <figure class="spot-card__thumb">
+            <img src="image/spot4.png" alt="사계절 온실 내부" loading="lazy">
+          </figure>
+  
+          <div class="spot-card__body">
+            <div class="spot-card__row">
+              <span class="spot-card__tag">갈대 앞 산책 구간</span>
+              <span class="spot-card__avatar">
+                <img src="image/photo-spot-icon.svg" alt="plus icon">
+              </span>
+            </div>
+  
+            <h3 class="spot-card__title">계절 풍경 대표 스팟</h3>
+            <p class="spot-card__meta">실루엣 · 여백 구도 추천</p>
+            <p class="spot-card__time">추천 시간 : 오후 4-6시</p>
           </div>
-
-          <h3 class="spot-card__title">계절 풍경 대표 스팟</h3>
-          <p class="spot-card__meta">실루엣 · 여백 구도 추천</p>
-          <p class="spot-card__time">추천 시간 : 오후 4-6시</p>
-        </div>
-      </a>
-    </article>
+        </a>
+      </article>
+    </div>
 
     </div>
 
 
   </section> 
 
+</div>  
+
+</main>
 
   <!-- /// 푸터 - 마지막 섹션 /// -->
 
-    <footer class="footer-con">
-      <div class="title-left Pretendard">
-        <p class="title-sub fs-20">도심 속, 살아있는 식물의 쉼터</p>
-        <h2 class="fs-45">국립 세종 수목원</h2>
-        <span>문의 044.251.0001</span>
-      </div>
-      <span class="deco-line"></span>
-      <nav class="sns-list">
-        <a class="sns-icon" href="#" aria-label="Instagram">
-          <img src="image/insta.svg" alt="인스타그램">
+  <footer class="footer-con">
+      <div class="footer-all-wrap">
+        <div class="title-left Pretendard">
+          <div class="title-call-wrap">
+            <p class="title-sub fs-20">도심 속, 살아있는 식물의 쉼터</p>
+            <h2 class="fs-45">국립 세종 수목원</h2>
+          </div>
+          <span class="call-wrap">
+            <img src="image/footer-call.svg" alt="call icon">
+            문의 044.251.0001
+          </span>
+        </div>
+        <span class="deco-line"></span>
+       
+        <div class="ex-txt">
+          <span>이용약관</span>
+          <span>개인정보처리방침</span>
+          <span>영상정보처리기기 운영/방침</span>
+          <span>윤리경영</span>
+        </div>
+         <nav class="sns-list">
+          <a class="sns-icon" href="#" aria-label="Instagram">
+            <img src="image/insta.svg" alt="인스타그램">
+          </a>
+          <a class="sns-icon" href="#" aria-label="Facebook">
+            <img src="image/facebook.svg" alt="페이스북">
         </a>
-        <a class="sns-icon" href="#" aria-label="Facebook">
-          <img src="image/facebook.svg" alt="페이스북">
-      </a>
-        <a class="sns-icon" href="#" aria-label="YouTube">
-          <img src="image/youtube.svg" alt="유튜브">
-        </a>
-        <a class="sns-icon" href="#" aria-label="Blog">
-          <img src="image/blog.svg" alt="블로그       ">
-        </a>
-      </nav>
-      <div class="ex-txt">
-        <span>이용약관</span>
-        <span>개인정보처리방침</span>
-        <span>영상정보처리기기 운영/방침</span>
-        <span>윤리경영</span>
+          <a class="sns-icon" href="#" aria-label="YouTube">
+            <img src="image/youtube.svg" alt="유튜브">
+          </a>
+          <a class="sns-icon" href="#" aria-label="Blog">
+            <img src="image/blog.svg" alt="블로그       ">
+          </a>
+        </nav>
+        <span class="ex-txt2">30106 세종특별자치시 연기면 수목원로 136 국립세종수목원</span>
       </div>
-      <div class="ex-txt2">
-        <span>30106 세종특별자치시 연기면 수목원로 136 국립세종수목원</span>
-        <span>@ 국립세종수목원. All Rights Reserved.</span>
-      </div>
-    </footer>
+  </footer>
   
-  </div> 
-  
-  </main>
+
+
 
   
   

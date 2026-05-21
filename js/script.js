@@ -244,110 +244,6 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// 메가 메뉴 - gnb 이동 시, 상태 유지
-// document.addEventListener('DOMContentLoaded', () => {
-//   const nav = document.querySelector('.gnb-nav');
-//   const items = document.querySelectorAll('.gnb-item.has-mega');
-//   if (!nav || !items.length) return;
-
-//   let openItem = null;
-
-//   function open(target) {
-//     // 이미 열려있으면 스킵
-//     if (openItem === target) return;
-
-//     // 이전 열림 닫기
-//     if (openItem) openItem.classList.remove('is-open');
-
-//     // 새 메뉴 열기
-//     target.classList.add('is-open');
-//     openItem = target;
-//   }
-
-//   function closeAll() {
-//     if (!openItem) return;
-//     openItem.classList.remove('is-open');
-//     openItem = null;
-//   }
-
-//   // 메뉴 hover/focus 들어오면 즉시 열기
-//   items.forEach(item => {
-//     const mega = item.querySelector('.mega');
-
-//     item.addEventListener('mouseenter', () => open(item));
-//     item.addEventListener('focusin', () => open(item));
-
-//     // mega 위에서도 현재 메뉴 유지
-//     if (mega) {
-//       mega.addEventListener('mouseenter', () => open(item));
-//       // ✅ mega에서 나간다고 바로 닫지 않음
-//       // (nav 영역을 벗어날 때만 닫게 할 거라서)
-//     }
-//   });
-
-//   // ✅ nav(헤더 메뉴 영역) 밖으로 완전히 나가면 닫기
-//   nav.addEventListener('mouseleave', closeAll);
-
-//   // ESC로 닫기
-//   document.addEventListener('keydown', (e) => {
-//     if (e.key !== 'Escape') return;
-//     closeAll();
-//   });
-// });
-
-
-// document.addEventListener('DOMContentLoaded', () => {
-//   const nav = document.querySelector('.gnb-nav');
-//   const items = document.querySelectorAll('.gnb-item.has-mega');
-//   const megas = document.querySelectorAll('.mega');
-//   if (!nav || !items.length) return;
-
-//   let activeItem = null;
-
-//   function open(item){
-//     if (activeItem === item) return;
-
-//     if (activeItem) activeItem.classList.remove('is-open');
-
-//     item.classList.add('is-open');
-//     activeItem = item;
-//   }
-
-//   function closeAll(){
-//     if (!activeItem) return;
-//     activeItem.classList.remove('is-open');
-//     activeItem = null;
-//   }
-
-//   items.forEach(item => {
-//     const mega = item.querySelector('.mega');
-
-//     // gnb hover
-//     item.addEventListener('mouseenter', () => open(item));
-//     item.addEventListener('focusin', () => open(item));
-
-//     // mega 위에서도 유지
-//     if (mega) {
-//       mega.addEventListener('mouseenter', () => open(item));
-//     }
-//   });
-
-//   // ✅ nav + mega 둘 다 아닌 곳으로 나갔을 때만 닫기
-//   document.addEventListener('mousemove', (e) => {
-//     const isInNav = nav.contains(e.target);
-//     const isInMega = [...megas].some(m => m.contains(e.target));
-
-//     if (!isInNav && !isInMega) {
-//       closeAll();
-//     }
-//   });
-
-//   // ESC 닫기
-//   document.addEventListener('keydown', (e) => {
-//     if (e.key === 'Escape') closeAll();
-//   });
-// });
-
 
 
 // 메가 이동 시, 닫힘 없음
@@ -433,176 +329,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-// 같은 gnb 클릭 시, 닫힘 
-// document.addEventListener('DOMContentLoaded', () => {
-//   const nav = document.querySelector('.gnb-nav');
-//   const items = document.querySelectorAll('.gnb-item.has-mega');
-//   if (!nav || !items.length) return;
-
-//   const CLOSE_DELAY = 220;
-//   let activeItem = null;
-//   let closeTimer = null;
-//   let openedByClick = false; // ⭐ 핵심 플래그
-
-//   const clearClose = () => {
-//     if (closeTimer) {
-//       clearTimeout(closeTimer);
-//       closeTimer = null;
-//     }
-//   };
-
-//   const open = (item, byClick = false) => {
-//     clearClose();
-
-//     if (activeItem === item) return;
-
-//     if (activeItem) activeItem.classList.remove('is-open');
-
-//     item.classList.add('is-open');
-//     activeItem = item;
-//     openedByClick = byClick;
-//   };
-
-//   const closeAll = () => {
-//     clearClose();
-//     if (!activeItem) return;
-//     activeItem.classList.remove('is-open');
-//     activeItem = null;
-//     openedByClick = false;
-//   };
-
-//   const scheduleClose = () => {
-//     if (openedByClick) return; // ⭐ 클릭으로 연 상태면 hover로는 닫지 않음
-//     clearClose();
-//     closeTimer = setTimeout(closeAll, CLOSE_DELAY);
-//   };
-
-//   items.forEach(item => {
-//     const mega = item.querySelector('.mega');
-//     const link = item.querySelector('.gnb-link');
-
-//     // ===== hover =====
-//     item.addEventListener('mouseenter', () => open(item, false));
-//     item.addEventListener('focusin', () => open(item, false));
-//     item.addEventListener('mouseleave', scheduleClose);
-
-//     if (mega) {
-//       mega.addEventListener('mouseenter', () => open(item, false));
-//       mega.addEventListener('mouseleave', scheduleClose);
-//     }
-
-//     // ===== click =====
-//     if (link) {
-//       link.addEventListener('click', (e) => {
-//         e.preventDefault();
-//         e.stopPropagation();
-
-//         // ⭐ 같은 gnb 다시 클릭 → 닫기
-//         if (activeItem === item && openedByClick) {
-//           closeAll();
-//           return;
-//         }
-
-//         // ⭐ 새로 클릭 → 고정 열기
-//         open(item, true);
-//       });
-//     }
-//   });
-
-//   // nav 영역
-//   nav.addEventListener('mouseenter', clearClose);
-//   nav.addEventListener('mouseleave', scheduleClose);
-
-//   // ESC
-//   document.addEventListener('keydown', (e) => {
-//     if (e.key === 'Escape') closeAll();
-//   });
-
-//   // 바깥 클릭
-//   document.addEventListener('click', (e) => {
-//     if (!nav.contains(e.target)) closeAll();
-//   });
-// });
 
 
 
-// 봄의 수목원 - 토글 버튼
-// document.addEventListener('DOMContentLoaded', () => {
-//   // ✅ 봄 탭 영역만 스코프 고정 (추천코스랑 겹침 방지)
-//   const springRoot = document.querySelector('.april-tabs');
-//   if (!springRoot) return;
+// 햄버거 메뉴 아이콘 눌렀을 경우, 나오는 창 (오->왼)
 
-//   const tablist = springRoot.querySelector('.course-toggle[role="tablist"]');
-//   const tabs = springRoot.querySelectorAll('.course-toggle .course-btn[data-spring]');
-//   const panels = springRoot.querySelectorAll('.toggle-content [role="tabpanel"], .toggle-content .content');
+document.querySelector('.mobile_menu_toggle').addEventListener('click', function() {
+  document.body.classList.add('menu_active');
+});
 
-//   if (!tablist || tabs.length === 0 || panels.length === 0) return;
+document.querySelector('#mobile-nav #close').addEventListener('click', function() {
+  document.body.classList.remove('menu_active');
+});
 
-//   function showPanel(key) {
-//     const keyStr = String(key); // "vision" | "plant"
+document.querySelector('.menu-overlay').addEventListener('click', function() {
+  document.body.classList.remove('menu_active');
+});
 
-//     // ✅ 버튼에서 aria-controls로 targetId 가져오기 (가장 안정적)
-//     const btn = Array.from(tabs).find((b) => b.dataset.spring === keyStr);
-//     const targetId = btn ? btn.getAttribute('aria-controls') : null;
-//     if (!targetId) return;
 
-//     // 탭 상태 업데이트
-//     tabs.forEach((b) => {
-//       const on = b.dataset.spring === keyStr;
-//       b.classList.toggle('active', on);
-//       b.setAttribute('aria-selected', on ? 'true' : 'false');
-//       b.setAttribute('tabindex', on ? '0' : '-1');
-//     });
 
-//     // 패널 show/hide
-//     panels.forEach((panel) => {
-//       const on = panel.id === targetId;
-//       panel.classList.toggle('active', on);
 
-//       if (on) panel.removeAttribute('hidden');
-//       else panel.setAttribute('hidden', '');
-//     });
-//   }
 
-//   // 클릭 이벤트
-//   tabs.forEach((btn) => {
-//     btn.addEventListener('click', () => showPanel(btn.dataset.spring));
-//   });
 
-//   // ✅ 키보드 조작(← → / Home / End)
-//   tablist.addEventListener('keydown', (e) => {
-//     const keys = ['ArrowLeft', 'ArrowRight', 'Home', 'End'];
-//     if (!keys.includes(e.key)) return;
 
-//     e.preventDefault();
 
-//     const tabArray = Array.from(tabs);
-//     const currentIndex = tabArray.indexOf(document.activeElement);
 
-//     // 포커스가 버튼에 없을 수도 있어서 fallback
-//     const safeIndex = currentIndex >= 0 ? currentIndex : 0;
-
-//     let nextIndex = safeIndex;
-
-//     if (e.key === 'ArrowLeft') nextIndex = Math.max(0, safeIndex - 1);
-//     if (e.key === 'ArrowRight') nextIndex = Math.min(tabArray.length - 1, safeIndex + 1);
-//     if (e.key === 'Home') nextIndex = 0;
-//     if (e.key === 'End') nextIndex = tabArray.length - 1;
-
-//     const nextTab = tabArray[nextIndex];
-//     if (!nextTab) return;
-
-//     nextTab.focus();
-//     showPanel(nextTab.dataset.spring);
-//   });
-
-//   // 초기 상태 보정
-//   const initial =
-//     springRoot.querySelector('.course-toggle .course-btn.active[data-spring]') || tabs[0];
-//   showPanel(initial.dataset.spring);
-// });
-
-// 봄의 수목원 - 다른 느낌
 document.addEventListener('DOMContentLoaded', () => {
   // ✅ 봄 섹션만 스코프 고정 (추천코스와 완전 분리)
   const springRoot = document.querySelector('.spring-tabs');
@@ -719,7 +470,7 @@ document.addEventListener('DOMContentLoaded', () => {
     loop: true,
 
     autoplay: {
-      delay: 2500,
+      delay: 2700,
       disableOnInteraction: false,
     },
 
@@ -735,7 +486,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
 
     breakpoints: {
-      0: { slidesPerView: 1.2, spaceBetween: 16 },
+      0: { slidesPerView: 1.4, spaceBetween: 16 },
       640: { slidesPerView: 2, spaceBetween: 24 },
       1024: { slidesPerView: 3, spaceBetween: 36 },
       1280: { slidesPerView: 4, spaceBetween: 46 },
