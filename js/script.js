@@ -194,158 +194,55 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
-
-
-
-
-
-
-
-// 메가 메뉴 - 점 정중앙 표시
+// 메가 메뉴 - 드롭다운 + 햄버거 + 닫힘 버튼
 document.addEventListener('DOMContentLoaded', () => {
-  const headerBox = document.querySelector('.header-box');
-  const indicator = document.querySelector('.gnb-indicator');
-  const items = document.querySelectorAll('.gnb-item.has-mega');
-
-  if (!headerBox || !indicator || items.length === 0) return;
-
-  function moveIndicatorTo(item){
-    const link = item.querySelector('.gnb-link') || item.querySelector('a');
-    if (!link) return;
-
-    const boxRect = headerBox.getBoundingClientRect();
-    const linkRect = link.getBoundingClientRect();
-
-    // 링크의 가운데 x좌표를 headerBox 기준 left로 변환
-    const centerX = (linkRect.left + linkRect.right) / 2 - boxRect.left;
-
-    indicator.style.left = `${centerX}px`;
-    indicator.style.opacity = '1';
-  }
-
-  function hideIndicator(){
-    indicator.style.opacity = '0';
-  }
-
-  items.forEach(item => {
-    item.addEventListener('mouseenter', () => moveIndicatorTo(item));
-    item.addEventListener('focusin', () => moveIndicatorTo(item));
-  });
-
-  // 헤더에서 벗어나면 숨김
-  headerBox.addEventListener('mouseleave', hideIndicator);
-
-  // 리사이즈 시 위치 재계산(열려있는 항목이 있다면 그걸로)
-  window.addEventListener('resize', () => {
-    const active = document.querySelector('.gnb-item.has-mega:hover, .gnb-item.has-mega:focus-within');
-    if (active) moveIndicatorTo(active);
-  });
-});
-
-
-
-
-// 메가 이동 시, 닫힘 없음
-document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.querySelector('.mobile-toggle');
   const nav = document.querySelector('.gnb-nav');
-  const items = document.querySelectorAll('.gnb-item.has-mega');
-  if (!nav || !items.length) return;
+  const menuItems = document.querySelectorAll('.gnb-item');
 
-  const CLOSE_DELAY = 220; // ✅ 이동 구간 버퍼(180~260 추천)
-  let activeItem = null;
-  let closeTimer = null;
+  if (!toggle || !nav) return;
 
-  const clearClose = () => {
-    if (closeTimer) {
-      clearTimeout(closeTimer);
-      closeTimer = null;
-    }
-  };
+  // 모바일 메뉴 열기 / 닫기
+  toggle.addEventListener('click', () => {
+    nav.classList.toggle('is-open');
+    toggle.classList.toggle('is-open');
+  });
 
-  const open = (item) => {
-    clearClose();
-    if (activeItem === item) return;
-
-    if (activeItem) activeItem.classList.remove('is-open');
-    item.classList.add('is-open');
-    activeItem = item;
-  };
-
-  const closeAll = () => {
-    clearClose();
-    if (!activeItem) return;
-    activeItem.classList.remove('is-open');
-    activeItem = null;
-  };
-
-  const scheduleClose = () => {
-    clearClose();
-    closeTimer = setTimeout(closeAll, CLOSE_DELAY);
-  };
-
-  items.forEach(item => {
-    const mega = item.querySelector('.mega');
+  // 모바일 서브메뉴 아코디언
+  menuItems.forEach((item) => {
     const link = item.querySelector('.gnb-link');
+    const mega = item.querySelector('.mega-menu');
 
-    // ✅ GNB에 들어오면 열기
-    item.addEventListener('mouseenter', () => open(item));
-    item.addEventListener('focusin', () => open(item));
+    if (!link || !mega) return;
 
-    // ✅ GNB에서 나가면 "닫기 예약" (즉시 닫지 않음)
-    item.addEventListener('mouseleave', scheduleClose);
+    link.addEventListener('click', (e) => {
+      if (window.innerWidth > 768) return;
 
-    // ✅ mega에 들어오면 닫기 예약 취소 + 유지
-    if (mega) {
-      mega.addEventListener('mouseenter', () => open(item));
-      mega.addEventListener('mouseleave', scheduleClose);
-    }
+      e.preventDefault();
 
-    // (선택) 클릭 시 토글 원하면 아래 주석 해제
-    if (link) {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        if (activeItem === item) closeAll();
-        else open(item);
+      // 하나만 열리게 하고 싶으면 이 부분 사용
+      menuItems.forEach((otherItem) => {
+        if (otherItem !== item) {
+          otherItem.classList.remove('is-active');
+        }
+      });
+
+      item.classList.toggle('is-active');
+    });
+  });
+
+  // 화면 커지면 모바일 상태 초기화
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      nav.classList.remove('is-open');
+      toggle.classList.remove('is-open');
+
+      menuItems.forEach((item) => {
+        item.classList.remove('is-active');
       });
     }
   });
-
-  // ✅ nav에서 나가도 "닫기 예약"
-  nav.addEventListener('mouseleave', scheduleClose);
-  nav.addEventListener('mouseenter', clearClose);
-
-  // ✅ ESC 닫기
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeAll();
-  });
-
-  // ✅ 바깥 클릭 닫기(원하면 유지)
-  document.addEventListener('click', (e) => {
-    if (!nav.contains(e.target)) closeAll();
-  });
 });
-
-
-
-
-
-
-// 햄버거 메뉴 아이콘 눌렀을 경우, 나오는 창 (오->왼)
-
-document.querySelector('.mobile_menu_toggle').addEventListener('click', function() {
-  document.body.classList.add('menu_active');
-});
-
-document.querySelector('#mobile-nav #close').addEventListener('click', function() {
-  document.body.classList.remove('menu_active');
-});
-
-document.querySelector('.menu-overlay').addEventListener('click', function() {
-  document.body.classList.remove('menu_active');
-});
-
 
 
 

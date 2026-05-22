@@ -23,10 +23,10 @@
 
 /* ===== 1200px 이하 ===== */
 @media screen and (max-width: 1200px) {
-    .mega {
+    /* .mega {
         opacity: 1;
         visibility: visible;
-    }
+    } */
 
     .main-banner {
         width: 100%;
@@ -133,16 +133,7 @@
     .gnb {
       justify-content:flex-start;
       flex-wrap:wrap;
-      gap: 10px;
-    }
-
-    /* 모바일에서는 hover UX가 별로라서 기본적으로 메가를 닫아두는 편 */
-    .mega {
-      display: none;
-    }
-
-    .pc-nav {
-        display: none;
+      gap: 24px;
     }
 
     #mobile-nav {
@@ -306,6 +297,112 @@
 
 /* ===== 768px 이하 (모바일 큰 화면) ===== */
 @media screen and (max-width: 768px){
+    .icon-btn {
+        display: none;
+    }
+
+
+    .mobile-toggle{
+        display: block;
+    }
+
+    .mega-links{
+        list-style: none;
+        padding: 0;
+    }
+
+
+    .gnb-nav{
+    position: fixed;
+    top: 80px;
+    left: 0;
+
+    width: 100%;
+    height: calc(100vh - 80px);
+
+    background: #ffffff;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transition: .2s ease;
+
+    width: 100%;
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+    }
+
+    .gnb-nav.is-open{
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .gnb-nav.is-open{
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .gnb{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 30px;
+    }
+
+    .gnb-item{
+        width: 100%;
+    }
+
+    .gnb-link{
+        height: 64px;
+        width: 100%;
+        justify-content: space-between;
+        padding-left: 20px;
+        border-bottom: 1px solid #e9e9e9;
+    }
+
+    .gnb-item.is-active .gnb-link{
+        background: #31986a;
+        color: #ffffff;
+    }
+
+    .mega-menu{
+        display: none;
+        position: static;
+        width: 100%;
+        min-height: auto;
+        padding: 0;
+        box-shadow: none;
+        border: 0;
+
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .gnb-item.is-active .mega-menu{
+        display: block;
+    }
+
+    .mega-left,
+    .mega-right{
+        display: none;
+    }
+
+    .mega-center{
+        background: none;
+        min-height: auto;
+        padding: 20px;
+        border-bottom: 1px solid #111;
+    }
+
+    .mega-sub-title {
+        display: none;
+    }
+
     .all_title_col {
         display: flex;
         flex-direction: column;
@@ -373,13 +470,13 @@
     }
 
     /* 모바일에서는 hover UX가 별로라서 기본적으로 메가를 닫아두는 편 */
-    .mega {
+    /* .mega {
         display: none;
-    }
+    } */
 
-    .pc-nav {
+    /* .pc-nav {
         display: none;
-    }
+    } */
 
     #mobile-nav {
        width: 100%;
